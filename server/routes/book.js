@@ -16,7 +16,7 @@ router.get('/',async(req,res,next)=>{
 try{
     const BookList = await Book.find();
     res.render('Book/list',{
-        title:'Books',
+        title:'Appointment List',
         BookList:BookList
     })}
     catch(err){
@@ -30,7 +30,7 @@ try{
 router.get('/add',async(req,res,next)=>{
     try{
         res.render('Book/add',{
-            title: 'Add Book'
+            title: 'Book Appointment'
         })
     }
     catch(err)
@@ -70,7 +70,7 @@ router.get('/edit/:id',async(req,res,next)=>{
         const bookToEdit= await Book.findById(id);
         res.render('Book/edit',
             {
-                title:'Edit Book',
+                title:'Edit Appointment',
                 Book:bookToEdit
             }
         )
