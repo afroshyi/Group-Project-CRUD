@@ -91,3 +91,12 @@ body {
     align-items: center;
     margin:auto;
 }
+
+@media(max-width:800px) {
+    .contact-inputs {
+        width:80vw;
+    }
+    .right-side {
+        display:none;
+    }
+}
